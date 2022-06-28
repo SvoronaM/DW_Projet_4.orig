@@ -8,7 +8,6 @@
 
 html {
     font-family: sans-serif;
-    -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
 }
 
@@ -271,12 +270,6 @@ th {
         max-width: 100% !important
     }
     h2,
-    h3,
-    p {
-        orphans: 3;
-        widows: 3
-    }
-    h2,
     h3 {
         page-break-after: avoid
     }
@@ -313,12 +306,11 @@ th {
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    font-family: 'Glyphicons Halflings', sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
 }
 
 .glyphicon-asterisk:before {
@@ -1417,8 +1409,6 @@ a:hover {
 }
 
 a:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px
 }
 
@@ -1859,7 +1849,7 @@ abbr[title] {
 blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
-    font-size: 17.5px;
+    font-size: 17px;
     border-left: 5px solid #eee
 }
 
@@ -1952,7 +1942,7 @@ kbd kbd {
 
 pre {
     display: block;
-    padding: 9.5px;
+    padding: 9px;
     margin: 0 0 10px;
     font-size: 13px;
     line-height: 1.42857143;
@@ -3123,8 +3113,6 @@ select[size] {
 input[type=file]:focus,
 input[type=checkbox]:focus,
 input[type=radio]:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px
 }
 
@@ -3165,10 +3153,6 @@ output {
 .form-control::-moz-placeholder {
     color: #999;
     opacity: 1
-}
-
-.form-control:-ms-input-placeholder {
-    color: #999
 }
 
 .form-control::-webkit-input-placeholder {
@@ -3250,7 +3234,7 @@ input[type=search] {
 .radio input[type=radio],
 .radio-inline input[type=radio] {
     position: absolute;
-    margin-top: 4px\9;
+    margin-top: 4px;
     margin-left: -20px
 }
 
@@ -3405,7 +3389,7 @@ textarea.input-lg {
 }
 
 .has-feedback .form-control {
-    padding-right: 42.5px
+    padding-right: 42px
 }
 
 .form-control-feedback {
@@ -3641,7 +3625,7 @@ textarea.input-lg {
 
 @media (min-width:768px) {
     .form-horizontal .form-group-lg .control-label {
-        padding-top: 14.33px;
+        padding-top: 14px;
         font-size: 18px
     }
 }
@@ -3681,8 +3665,6 @@ textarea.input-lg {
 .btn:active.focus,
 .btn:active:focus,
 .btn:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px
 }
 
@@ -3705,7 +3687,6 @@ textarea.input-lg {
 .btn[disabled],
 fieldset[disabled] .btn {
     cursor: not-allowed;
-    filter: alpha(opacity=65);
     -webkit-box-shadow: none;
     box-shadow: none;
     opacity: .65
@@ -4317,7 +4298,6 @@ tbody.collapse.in {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
@@ -4373,7 +4353,6 @@ tbody.collapse.in {
     cursor: not-allowed;
     background-color: transparent;
     background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
 }
 
 .open>.dropdown-menu {
@@ -4559,7 +4538,6 @@ tbody.collapse.in {
 
 .btn-lg .caret {
     border-width: 5px 5px 0;
-    border-bottom-width: 0
 }
 
 .dropup .btn-lg .caret {
@@ -5245,7 +5223,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 }
 
 .navbar-nav {
-    margin: 7.5px -15px
+    margin: 7px -15px
 }
 
 .navbar-nav>li>a {
@@ -5294,10 +5272,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 
 .navbar-form {
     padding: 10px 15px;
-    margin-top: 8px;
-    margin-right: -15px;
-    margin-bottom: 8px;
-    margin-left: -15px;
+    margin: 8px -15px;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
@@ -5385,10 +5360,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 
 .navbar-fixed-bottom .navbar-nav>li>.dropdown-menu {
     margin-bottom: 0;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0
+    border-radius: 4px 4px 0 0;
 }
 
 .navbar-btn {
@@ -6164,15 +6136,6 @@ a.thumbnail:hover {
     }
 }
 
-@-o-keyframes progress-bar-stripes {
-    from {
-        background-position: 40px 0
-    }
-    to {
-        background-position: 0 0
-    }
-}
-
 @keyframes progress-bar-stripes {
     from {
         background-position: 40px 0
@@ -6275,7 +6238,6 @@ a.thumbnail:hover {
 .media,
 .media-body {
     overflow: hidden;
-    zoom: 1
 }
 
 .media-body {
@@ -7042,7 +7004,6 @@ button.list-group-item-danger.active:hover {
     line-height: 1;
     color: #000;
     text-shadow: 0 1px 0 #fff;
-    filter: alpha(opacity=20);
     opacity: .2
 }
 
@@ -7051,7 +7012,6 @@ button.list-group-item-danger.active:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    filter: alpha(opacity=50);
     opacity: .5
 }
 
@@ -7114,7 +7074,6 @@ button.close {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #999;
-    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 6px;
     outline: 0;
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
@@ -7132,17 +7091,15 @@ button.close {
 }
 
 .modal-backdrop.fade {
-    filter: alpha(opacity=0);
     opacity: 0
 }
 
 .modal-backdrop.in {
-    filter: alpha(opacity=50);
     opacity: .5
 }
 
 .modal-header {
-    min-height: 16.43px;
+    min-height: 16px;
     padding: 15px;
     border-bottom: 1px solid #e5e5e5
 }
@@ -7217,7 +7174,6 @@ button.close {
     font-style: normal;
     font-weight: 400;
     line-height: 1.42857143;
-    text-align: left;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -7227,13 +7183,11 @@ button.close {
     word-spacing: normal;
     word-wrap: normal;
     white-space: normal;
-    filter: alpha(opacity=0);
     opacity: 0;
     line-break: auto
 }
 
 .tooltip.in {
-    filter: alpha(opacity=90);
     opacity: .9
 }
 
@@ -7351,7 +7305,6 @@ button.close {
     font-style: normal;
     font-weight: 400;
     line-height: 1.42857143;
-    text-align: left;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -7365,7 +7318,6 @@ button.close {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 6px;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
@@ -7511,8 +7463,8 @@ button.close {
     line-height: 1
 }
 
-@media all and (transform-3d),
-(-webkit-transform-3d) {
+@media (-webkit-transform-3d),
+all {
     .carousel-inner>.item {
         -webkit-transition: -webkit-transform .6s ease-in-out;
         -o-transition: -o-transform .6s ease-in-out;
@@ -7591,7 +7543,6 @@ button.close {
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-    filter: alpha(opacity=50);
     opacity: .5
 }
 
@@ -7600,7 +7551,6 @@ button.close {
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
     background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
     background-repeat: repeat-x
 }
 
@@ -7611,7 +7561,6 @@ button.close {
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
     background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
     background-repeat: repeat-x
 }
 
@@ -7619,7 +7568,6 @@ button.close {
 .carousel-control:hover {
     color: #fff;
     text-decoration: none;
-    filter: alpha(opacity=90);
     outline: 0;
     opacity: .9
 }
@@ -7819,7 +7767,8 @@ button.close {
 }
 
 .text-hide {
-    font: 0/0 a;
+    line-height: 0;
+    font-size: 0;
     color: transparent;
     text-shadow: none;
     background-color: transparent;
@@ -7832,10 +7781,6 @@ button.close {
 
 .affix {
     position: fixed
-}
-
-@-ms-viewport {
-    width: device-width
 }
 
 .visible-lg,
